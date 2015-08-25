@@ -11,7 +11,6 @@
 
     <title>SphereCon 2015 - An Apache Mesos Conference</title>
 
-    <!-- Bootstrap Core CSS - Uses Bootswatch Flatly Theme: http://bootswatch.com/flatly/ -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Custom CSS -->
@@ -111,6 +110,7 @@
             </div>
         </div>
     </section>
+    <!-- Limited Seats w/ CTA Section -->
     <section id="signup">
         <div class="container">
             <div class="row">
@@ -123,6 +123,7 @@
             </div>
         </div>
     </section>
+
     <!-- Schedule Section -->
     <section id="schedule" >
         <div class="container">
@@ -197,21 +198,23 @@
                     
                 </div>
             </div>
+            <!-- Speaker 1 !-->
             <div class="speakerBlock row">
                 <div class="col-lg-12 col-xs-12">
                     <div class="col-lg-4 speakerPicture">
                         <img class="img-responsive hidden-xs" src="http://static.sched.org/a6/1161068/avatar.jpg.320x320px.jpg?0db">
                     </div>
-                    <div class="col-lg-8">
+                    <div class="col-lg-8 col-xs-12">
                         <h1 class="speakerName">Benjamin <span class="makeDarkPurple">Hindman</span></h1>
                         <h2 class="speakerJob">Founder and Chief Architect, Mesosphere</h2>
                         <p class="speakerDescription small">Benjamin Hindman is a Founder and Chief Architect at Mesosphere where he leads a team building out core services for the Mesosphere Data Center Operating System (DCOS). Ben co-created Apache Mesos as a PhD student at UC Berkeley before bringing it to Twitter where it now runs on tens of thousands of machines powering Twitter's datacenters. </p>
                     </div>
                 </div>
             </div>
+             <!-- Speaker 2 !-->
             <div class="speakerBlock row">
                 <div class="col-lg-12">
-                    <div class="col-lg-8 col-xs-12">
+                    <div class="col-lg-8 col-sm-6 col-xs-12">
                         <h1 class="speakerName">Kenneth <span class="makeDarkPurple">Owens</span></h1>
                         <h2 class="speakerJob">Chief Technology Officer, Cloud Intercloud Services, Cisco</h2>
                         <p class="speakerDescription small">Ken Owens is Chief Technology Officer, Cloud Intercloud Services at Cisco Systems. Ken is responsible for creating and communicating technical/scientific vision and strategy for Cloud Intercloud Services (CIS) business. He brings a compelling view of technology trends in enterprise IT (e.g., infrastructure, computing, SaaS, virtualization, and cloud) and evangelizes the technology roadmap for the business.</p>
@@ -221,21 +224,23 @@
                     </div>
                 </div>
             </div>
+             <!-- Speaker 3 !-->
             <div class="speakerBlock row">
                 <div class="col-lg-12">
                     <div class="col-lg-4 speakerPicture">
                         <img class="img-responsive hidden-xs" src="http://static.sched.org/a6/2122238/avatar.jpg.320x320px.jpg?b9b">
                     </div>
-                    <div class="col-lg-8">
+                    <div class="col-xs-12 col-lg-8">
                         <h1 class="speakerName">Neha <span class="makeDarkPurple">Narula</span></h1>
                        <!--  <h2 class="speakerJob">Senior Principal Software Engineer, Orbitz</h2> -->
                         <p class="speakerDescription small">Neha Narula just completed a PhD at the Computer Science and Artificial Intelligance Lab at MIT building fast, scalable distributed systems and databases. In a previous life she helped launch a new version of Digg and was a Senior Software Engineer at Google, where she designed the first version of Blobstore, a system for storing and serving petabytes of immutable data, and worked on Native Client, a system for running native code securely.</p>
                     </div>
                 </div>
             </div>
+             <!-- Speaker 4 !-->
             <div class="speakerBlock row">
                 <div class="col-lg-12">
-                    <div class="col-lg-8 col-xs-12">
+                    <div class="col-lg-8 col-sm-6 col-xs-12">
                         <h1 class="speakerName">Alex <span class="makeDarkPurple">Gaudio</span></h1>
                         <h2 class="speakerJob">Senior Data Scientist and Engineer, Sailthru</h2>
                         <p class="speakerDescription small">Alex Gaudio is a Senior Data Scientist and Engineer at Sailthru, where he builds machine learning algorithms and distributed data pipelines on Mesos. He is the primary developer of Relay.Mesos, an intelligent auto-scaler for Mesos that functions like a thermostat. He also develops Stolos, a tool to manage task dependencies represented as a Directed Acyclic Multi-Graph using distributed queues. In his free time, Alex loves to build hardware such as a Laser-SLA 3D printer, CO2 laser, and soon, a Raman Spectrometer. Alex has presented at PyGotham, a Python conference in NYC.</p>
@@ -247,6 +252,8 @@
             </div>
         </div>
     </section>
+
+    <!-- Venue Address and Google Map !-->
      <section id="venue">
         <div class="container">
             <div class="row">
@@ -299,7 +306,7 @@
                         <br>
                         <div class="row">
                             <div class="form-group col-xs-12">
-                                <button type="submit" class="btn btn-outline bottom-signup-button btn-lg">Sign Up</button>
+                                <button type="submit" class="btn btn-outline bottom-signup-button btn-lg">Register</button>
                             </div>
                         </div>
                     </form>
@@ -313,12 +320,9 @@
         <div class="footer-above">
             <div class="container">
                 <div class="row">
+                    <div class="footer-col col-md-4"></div>
                     <div class="footer-col col-md-4">
-                        <!-- <h3>Location</h3>
-                        <p>SOHO House<br>Chicago, Illinois</p> -->
-                    </div>
-                    <div class="footer-col col-md-4">
-                        <h3>Social</h3>
+                        <!-- <h3>Social</h3> -->
                         <ul class="list-inline">
                             <li>
                                 <a href="#" class="btn-social btn-social-outline"><i class="fa fa-fw fa-facebook"></i></a>
@@ -334,10 +338,7 @@
                             </li>
                         </ul>
                     </div>
-                    <div class="footer-col col-md-4">
-                        <!-- <h3>About <a href="http://www.mesosphere.com">Mesosphere</a></h3>
-                        <p>Our mission is to make building and running distributed systems as easy as building or running an app on your smartphone.</p> -->
-                    </div>
+                    <div class="footer-col col-md-4"></div>
                 </div>
             </div>
         </div>
