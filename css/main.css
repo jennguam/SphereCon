@@ -438,9 +438,6 @@ footer .footer-below {
   .eventDateLocation {
     font-size: 18px;
   }
-  .subheading:before {
-    display: none;
-  }
   .timeline:before {
     display: none;
   }
