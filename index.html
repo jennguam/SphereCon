@@ -19,7 +19,7 @@
 
     <!-- Custom Fonts -->
     <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-    <link href="https://www.google.com/fonts#UsePlace:use/Collection:Source+Sans+Pro:400,700" rel="stylesheet" type="text/css">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
     <link href="https://www.google.com/fonts#QuickUsePlace:quickUse/Family:Lato:400,700" rel="stylesheet" type="text/css">
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -81,11 +81,11 @@
                         <span class="name">SphereCon</span>
                         
                         <span class="event-description">Learn about DCOS and hang out with other Mesos enthusiasts.</span>
-                        <h2>August 20, 2015</h2>
-                        <h4 class="location">SOHO House, Chicago</h4>
+                        <h2 class="eventDateLocation">August 20, 2015 • SOHO House, Chicago</h2>
+                        <!-- <h4 class="location">SOHO House, Chicago</h4> -->
                         <div class="col-lg-8 col-lg-offset-2 text-center">
                         <a href="#register" class="btn btn-lg btn-cta">
-                            Register
+                            Save Your Seat
                         </a>
                         
                         </div>
@@ -247,12 +247,27 @@
             </div>
         </div>
     </section>
+     <section id="venue">
+        <div class="container">
+            <div class="row">
+                <div class="venue-info col-lg-6 text-center">
+                    <div class="venue-address">
+                        <h2>SoHo House</h2>
+                        <p>113 N Green St<br> Chicago, IL 60607</p>
+                    </div>
+                </div>
+                <div class="venue-maps col-lg-6" id="map">
+                    <!-- <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2970.4215676526724!2d-87.6482853!3d41.88379!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x880e2cdad2b9e40f%3A0x51fe7ff73d45174e!2sSoho+House+Chicago!5e0!3m2!1sen!2sus!4v1440475144996" width="600" height="515" frameborder="0" style="border:0" allowfullscreen></iframe> -->
+                </div>
+            </div>
+        </div>
+    </section>
     <!-- Contact Section -->
     <section id="register">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 text-center">
-                    <h2 class="subheading register">Register</h2>
+                    <h2 class="subheading register">Reserve Your Seat</h2>
                     
                 </div>
             </div>
@@ -283,7 +298,7 @@
                         <br>
                         <div class="row">
                             <div class="form-group col-xs-12">
-                                <button type="submit" class="btn btn-cta btn-lg">Send</button>
+                                <button type="submit" class="btn btn-outline bottom-signup-button btn-lg">Sign Up</button>
                             </div>
                         </div>
                     </form>
@@ -358,7 +373,8 @@
     <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
     <script src="js/classie.js"></script>
     <script src="js/cbpAnimatedHeader.js"></script>
-
+    <!-- Google Maps !-->
+    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?sensor=false"></script>
     <!-- Custom Theme JavaScript -->
     <script src="js/main.js"></script>
 

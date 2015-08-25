@@ -7,6 +7,7 @@ body {
 
 p {
 	font-size: 20px;
+  font-family: 'Open Sans', "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
 p.small {
@@ -15,10 +16,7 @@ p.small {
 	.talk_description{
 		font-size: 36px;
 		color: @black;
-	/*.speakerDescription{
-		font-size: ;
-	}*/
-}
+  }
 
 }
 a,
@@ -46,11 +44,14 @@ h1, h2, h3, h4, h5, h6 {
 	font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
 	text-transform: uppercase;
 	font-weight: 700;
-  &.location{
-    font-weight:500;
-  }
-
+  
 }
+h2.eventDateLocation{
+    font-weight:100;
+    font-size: 24px;
+    text-transform:none;
+}
+
 
 .subheading{
   margin-bottom: 75px;
@@ -195,20 +196,28 @@ section {
 	}
   
 }
-/*section
-section#schedule {
-	//background: @lightblue;
-	//color: white;
+.venue-info{
+     background: url("@{images}/SoHoHouse.png") no-repeat;
+    background-size: cover;
+    height: 515px;
+    color: @white;
+    background-position: center center;
 
-    a,
-    a:hover,
-    a:focus,
-    a:active,
-    a.active {
-      color: @brand-primary;
-      outline: none;
+    .venue-address{
+      position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
     }
-}*/
+  }
+  #map{
+    /*width: 600px;*/
+    height: 515px;
+  }
 
 
 
@@ -243,6 +252,9 @@ section#schedule {
 		background: white;
 		border: solid 2px white;
 	}
+  &.bottom-signup-button{
+    margin-top:15px;
+  }
 }
 
 .floating-label-form-group {
@@ -447,6 +459,8 @@ footer {
     border-radius: 5px;
 
     h2 { 
+      font-family: 'Open Sans',  Arial, sans-serif;
+      text-transform: none;
       margin-top: 0px;
       padding: 0 0 10px 0;
       border-bottom: 1px solid rgba(255,255,255,0.4);
@@ -536,6 +550,15 @@ footer {
 }
 
 @media screen and (max-width: 47.2em) {
+  #signup{
+    h2{
+      font-size: 32px;
+    }
+  }
+  h2.eventDateLocation{
+    font-size:18px;
+  }
+
   .timeline{
     &:before {
       display: none;
@@ -544,13 +567,14 @@ footer {
       width: 100%;
       position: relative;
       padding: 0 0 20px 0;
+      margin-left: 70px;
     }
     > li .schedule_time span {
       text-align: left;
     }
     > li .eventName {
       margin: 0 0 30px 0;
-      padding: 1em;
+      padding: 0;
       font-weight: 400;
       font-size: 95%;
     }
@@ -566,10 +590,9 @@ footer {
       border-bottom-color: @lightpurple;
     }
     > li .icon {
-      position: relative;
-      float: right;
+      float: left;
       left: auto;
-      margin: -55px 5px 0 0px;
+      margin: 0 5px 0 0;
     } 
   }
 }

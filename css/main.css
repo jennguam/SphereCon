@@ -3,6 +3,7 @@ body {
 }
 p {
   font-size: 20px;
+  font-family: 'Open Sans', "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 p.small {
   font-size: 16px;
@@ -10,9 +11,6 @@ p.small {
 p.small .talk_description {
   font-size: 36px;
   color: #000000;
-  /*.speakerDescription{
-		font-size: ;
-	}*/
 }
 a,
 a:focus {
@@ -43,13 +41,10 @@ h6 {
   text-transform: uppercase;
   font-weight: 700;
 }
-h1.location,
-h2.location,
-h3.location,
-h4.location,
-h5.location,
-h6.location {
-  font-weight: 500;
+h2.eventDateLocation {
+  font-weight: 100;
+  font-size: 24px;
+  text-transform: none;
 }
 .subheading {
   margin-bottom: 75px;
@@ -182,20 +177,27 @@ section h2.speakerJob {
   font-size: 2.5rem;
   font-weight: 500;
 }
-/*section
-section#schedule {
-	//background: @lightblue;
-	//color: white;
-
-    a,
-    a:hover,
-    a:focus,
-    a:active,
-    a.active {
-      color: @brand-primary;
-      outline: none;
-    }
-}*/
+.venue-info {
+  background: url("../img/SoHoHouse.png") no-repeat;
+  background-size: cover;
+  height: 515px;
+  color: #ffffff;
+  background-position: center center;
+}
+.venue-info .venue-address {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+#map {
+  /*width: 600px;*/
+  height: 515px;
+}
 .btn-outline {
   font-weight: 300;
   font-size: 24px;
@@ -227,6 +229,9 @@ section#schedule {
   color: #6b00da;
   background: white;
   border: solid 2px white;
+}
+.btn-outline.bottom-signup-button {
+  margin-top: 15px;
 }
 .floating-label-form-group {
   position: relative;
@@ -414,6 +419,8 @@ footer .footer-below {
   border-radius: 5px;
 }
 .timeline > li .eventName h2 {
+  font-family: 'Open Sans', Arial, sans-serif;
+  text-transform: none;
   margin-top: 0px;
   padding: 0 0 10px 0;
   border-bottom: 1px solid rgba(255, 255, 255, 0.4);
@@ -487,6 +494,12 @@ footer .footer-below {
   }
 }
 @media screen and (max-width: 47.2em) {
+  #signup h2 {
+    font-size: 32px;
+  }
+  h2.eventDateLocation {
+    font-size: 18px;
+  }
   .timeline:before {
     display: none;
   }
@@ -494,13 +507,14 @@ footer .footer-below {
     width: 100%;
     position: relative;
     padding: 0 0 20px 0;
+    margin-left: 70px;
   }
   .timeline > li .schedule_time span {
     text-align: left;
   }
   .timeline > li .eventName {
     margin: 0 0 30px 0;
-    padding: 1em;
+    padding: 0;
     font-weight: 400;
     font-size: 95%;
   }
@@ -516,9 +530,8 @@ footer .footer-below {
     border-bottom-color: #8200f7;
   }
   .timeline > li .icon {
-    position: relative;
-    float: right;
+    float: left;
     left: auto;
-    margin: -55px 5px 0 0px;
+    margin: 0 5px 0 0;
   }
 }
