@@ -115,8 +115,8 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
-                    <h2>
-                        <span>Limited seats available.</span>
+                    <h2 class="text-center">
+                        <span class="limited-seats">Limited seats available.</span>
                         <a href="#register" class="btn btn-outline">Sign up</a>
                     </h2>
                 </div>
@@ -205,7 +205,7 @@
                     <div class="col-lg-8">
                         <h1 class="speakerName">Benjamin <span class="makeDarkPurple">Hindman</span></h1>
                         <h2 class="speakerJob">Founder and Chief Architect, Mesosphere</h2>
-                        <p class="speakerDescription small">Benjamin Hindman is a Founder and Chief Architect at Mesosphere where he leads a team building out core services for the Mesosphere Data Center Operating System (DCOS). Ben co-created Apache Mesos as a PhD student at UC Berkeley before bringing it to Twitter where it now runs on tens of thousands of machines powering Twitter's datacenters. An academic at heart, his research in programming languages and distributed systems has been published in... Read More →</p>
+                        <p class="speakerDescription small">Benjamin Hindman is a Founder and Chief Architect at Mesosphere where he leads a team building out core services for the Mesosphere Data Center Operating System (DCOS). Ben co-created Apache Mesos as a PhD student at UC Berkeley before bringing it to Twitter where it now runs on tens of thousands of machines powering Twitter's datacenters. </p>
                     </div>
                 </div>
             </div>
@@ -256,12 +256,13 @@
                         <p>113 N Green St<br> Chicago, IL 60607</p>
                     </div>
                 </div>
-                <div class="venue-maps col-lg-6" id="map">
-                    <!-- <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2970.4215676526724!2d-87.6482853!3d41.88379!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x880e2cdad2b9e40f%3A0x51fe7ff73d45174e!2sSoho+House+Chicago!5e0!3m2!1sen!2sus!4v1440475144996" width="600" height="515" frameborder="0" style="border:0" allowfullscreen></iframe> -->
+                <div class="col-lg-6" id="map">
+                    
                 </div>
             </div>
         </div>
     </section>
+
     <!-- Contact Section -->
     <section id="register">
         <div class="container">
@@ -273,22 +274,22 @@
             </div>
             <div class="row">
                 <div class="col-lg-8 col-lg-offset-2">                
-                    <form name="sentMessage" id="contactForm" novalidate>
-                        <div class="row-fluid control-group">
-                            <div class="form-group col-xs-12 col-lg-5 floating-label-form-group controls nameContainer">
+                    <form name="sentMessage" id="contactForm">
+                        <div class="row-fluid">
+                            <div class="form-group col-xs-12 col-lg-5 floating-label-form  nameContainer">
                                 <label>Name</label>
                                 <input type="text" placeholder="Name" id="name">
                             </div>
                         </div>
-                        <div class="row control-group">
-                            <div class="form-group col-xs-12 col-lg-6 floating-label-form-group controls emailContainer">
+                        <div class="row">
+                            <div class="form-group col-xs-12 col-lg-6 floating-label-form controls emailContainer">
                                 <label>Email Address</label>
                                 <input type="text" placeholder="Email Address" id="email">
                                 
                             </div>
                         </div>
-                        <div class="row-fluid control-group">
-                            <div class="form-group col-xs-12 col-lg-5 floating-label-form-group controls">
+                        <div class="row-fluid">
+                            <div class="form-group col-xs-12 col-lg-5 floating-label-form">
                                 <label>Company</label>
                                 <input type="text" placeholder="Company" id="company">
                                 
