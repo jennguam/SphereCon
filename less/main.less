@@ -230,7 +230,9 @@ header {
 .speakerBlock{
   margin: 30px 0;
 }
-
+.makeDarkPurple{
+  color: @darkpurple;
+}
 .speakerPicture img {
   width: 250px;
   height: 250px;
@@ -246,9 +248,7 @@ section {
     	line-height: 4.5rem;
     	text-transform:none;
 	  }
-    .speakerLastName{
-      color: @darkpurple;
-    }
+    
   &#about, &#speakers{
     background-color: @lightblue;
   }
@@ -281,7 +281,7 @@ section {
 	}
   
 }
-section
+/*section
 section#schedule {
 	//background: @lightblue;
 	//color: white;
@@ -294,42 +294,33 @@ section#schedule {
       color: @brand-primary;
       outline: none;
     }
-}
+}*/
 
-@media(max-width:767px) {
-	section {
-		padding: 75px 0;
-	}
-	section.first {
-		padding-top: 75px;
-	}
-}
 
 
 .btn-outline {
   font-weight: 300;
-    font-size: 24px;
-    background: rgba(255, 255, 255, 0);
-    text-transform: uppercase;
-    padding: 15px 50px;
-    line-height: 1;
-    -o-transition-property: all;
-    -webkit-transition-property: all;
-    transition-property: all;
-    -o-transition-duration: 0.25s;
-    -webkit-transition-duration: 0.25s;
-    transition-duration: 0.25s;
-    -o-transition-timing-function: ease-in-out;
-    -webkit-transition-timing-function: ease-in-out;
-    transition-timing-function: ease-in-out;
-    -o-transition-delay: 0s;
-    -webkit-transition-delay: 0s;
-    transition-delay: 0s;
+  font-size: 24px;
+  background: rgba(255, 255, 255, 0);
+  text-transform: uppercase;
+  padding: 15px 50px;
+  line-height: 1;
+  -o-transition-property: all;
+  -webkit-transition-property: all;
+  transition-property: all;
+  -o-transition-duration: 0.25s;
+  -webkit-transition-duration: 0.25s;
+  transition-duration: 0.25s;
+  -o-transition-timing-function: ease-in-out;
+  -webkit-transition-timing-function: ease-in-out;
+  transition-timing-function: ease-in-out;
+  -o-transition-delay: 0s;
+  -webkit-transition-delay: 0s;
+  transition-delay: 0s;
 	color: white;
 	border: solid 2px white;
 	background: transparent;
 	transition: all 0.3s ease-in-out;
-	/*margin-top: 15px;*/
 	&:hover,
 	&:focus,
 	&:active,
@@ -339,11 +330,7 @@ section#schedule {
 		border: solid 2px white;
 	}
 }
-//disable textbox glow
-input[type="text"] {  
-      -webkit-box-shadow: none;
-      outline: -webkit-focus-ring-color auto 0px;
-} 
+
 .floating-label-form-group {
     position: relative;
     margin-bottom: 0;
@@ -362,6 +349,9 @@ input[type="text"] {
 	    box-shadow: none !important;
 	    resize: none;
       color: white;
+      /* Disables textbox glow */
+       -webkit-box-shadow: none;
+      outline: -webkit-focus-ring-color auto 0px;
     }
     label {
 	    display: block;
@@ -479,173 +469,156 @@ footer {
     }
 }
 
-.cbp_tmtimeline {
+.timeline {
   margin: 30px 0 0 0;
   padding: 0;
   list-style: none;
   position: relative;
+
+  /* The line */
+  &:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 10px;
+    background: #CCCCCC;
+    left: 20%;
+    margin-left: -10px;
+  }
+  /* Children Styles */
+  > li {
+    position: relative;
+  }
+
+  /* The date/time */
+  > li .schedule_time {
+    display: block;
+    width: 25%;
+    padding-right: 100px;
+    position: absolute;
+
+    span {
+      display: block;
+      text-align: right;
+    }
+
+    span:first-child {
+      font-size: 0.9em;
+      color: #bdd0db;
+      /*figure out */
+    }
+    span:last-child {
+      font-size: 24px;
+      color: #333;
+      line-height: 2;
+    }
+  }
+
+  /* Right content */
+  > li .eventName {
+    margin: 0 0 15px 25%;
+    background: #fff;
+    color: @darkpurple;
+    padding: 0.5em;
+    font-size: 1.2em;
+    font-weight: 300;
+    line-height: 1.4;
+    position: relative;
+    border-radius: 5px;
+
+    h2 { 
+      margin-top: 0px;
+      padding: 0 0 10px 0;
+      border-bottom: 1px solid rgba(255,255,255,0.4);
+      font-size: 22px;
+      margin-bottom: 12px;
+      margin-top: 0;
+      line-height: 1.2;
+      color: @darkgrey;
+    }
+  }
+
+  /* The icons */
+  > li .icon {
+    width: 40px;
+    height: 40px;
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    font-size: 1.4em;
+    line-height: 40px;
+    -webkit-font-smoothing: antialiased;
+    position: absolute;
+    color: #fff;
+    background: @darkpurple;
+    border-radius: 50%;
+    box-shadow: 0 0 0 8px #CCCCCC;
+    text-align: center;
+    left: 20%;
+    top: 0;
+    margin: 0 0 0 -25px;
+  }
 } 
 
-/* The line */
-.cbp_tmtimeline:before {
-  content: '';
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  width: 10px;
-  background: #CCCCCC;
-  left: 20%;
-  margin-left: -10px;
+
+/* Media Queries */
+
+@media(max-width:767px) {
+  section {
+    padding: 75px 0;
+  }
+  section.first {
+    padding-top: 75px;
+  }
 }
 
-.cbp_tmtimeline > li {
-  position: relative;
-}
-
-/* The date/time */
-.cbp_tmtimeline > li .cbp_tmtime {
-  display: block;
-  width: 25%;
-  padding-right: 100px;
-  position: absolute;
-}
-
-.cbp_tmtimeline > li .cbp_tmtime span {
-  display: block;
-  text-align: right;
-}
-
-.cbp_tmtimeline > li .cbp_tmtime span:first-child {
-  font-size: 0.9em;
-  color: #bdd0db;
-}
-
-.cbp_tmtimeline > li .cbp_tmtime span:last-child {
-  font-size: 24px;
-  color: #333;
-  line-height: 2;
-}
-
-
-/* Right content */
-.cbp_tmtimeline > li .cbp_tmlabel {
-  margin: 0 0 15px 25%;
-  background: #fff;
-  color: @darkpurple;
-  padding: 2em;
-  font-size: 1.2em;
-  font-weight: 300;
-  line-height: 1.4;
-  position: relative;
-  border-radius: 5px;
-}
-
-.cbp_tmtimeline > li:nth-child(odd) .cbp_tmlabel {
-  background: white;
-}
-
-.cbp_tmtimeline > li .cbp_tmlabel h2 { 
-  margin-top: 0px;
-  padding: 0 0 10px 0;
-  border-bottom: 1px solid rgba(255,255,255,0.4);
-  font-size: 22px;
-  margin-bottom: 12px;
-  margin-top: 0;
-  line-height: 1.2;
-  color: #333;
-}
-
-/* The triangle */
-/*.cbp_tmtimeline > li .cbp_tmlabel:after {
-  right: 100%;
-  border: solid transparent;
-  content: " ";
-  height: 0;
-  width: 0;
-  position: absolute;
-  pointer-events: none;
-  border-right-color: @darkpurple;
-  border-width: 10px;
-  top: 10px;
-}*/
-
-.cbp_tmtimeline > li:nth-child(odd) .cbp_tmlabel:after {
-  border-right-color: @lightpurple;
-}
-
-/* The icons */
-.cbp_tmtimeline > li .cbp_tmicon {
-  width: 40px;
-  height: 40px;
-  speak: none;
-  font-style: normal;
-  font-weight: normal;
-  font-variant: normal;
-  text-transform: none;
-  font-size: 1.4em;
-  line-height: 40px;
-  -webkit-font-smoothing: antialiased;
-  position: absolute;
-  color: #fff;
-  background: @darkpurple;
-  border-radius: 50%;
-  box-shadow: 0 0 0 8px #CCCCCC;
-  text-align: center;
-  left: 20%;
-  top: 0;
-  margin: 0 0 0 -25px;
-}
-
-
-/* Example Media Queries */
 @media screen and (max-width: 65.375em) {
 
-  .cbp_tmtimeline > li .cbp_tmtime span:last-child {
+  .timeline > li .schedule_time span:last-child {
     font-size: 1.5em;
   }
 }
 
 @media screen and (max-width: 47.2em) {
-  .cbp_tmtimeline:before {
-    display: none;
+  .timeline{
+    &:before {
+      display: none;
+    }
+    > li .schedule_time {
+      width: 100%;
+      position: relative;
+      padding: 0 0 20px 0;
+    }
+    > li .schedule_time span {
+      text-align: left;
+    }
+    > li .eventName {
+      margin: 0 0 30px 0;
+      padding: 1em;
+      font-weight: 400;
+      font-size: 95%;
+    }
+    > li .eventName:after {
+      right: auto;
+      left: 20px;
+      border-right-color: transparent;
+      border-bottom-color: @darkpurple;
+      top: -20px;
+    }
+    > li:nth-child(odd) .eventName:after {
+      border-right-color: transparent;
+      border-bottom-color: @lightpurple;
+    }
+    > li .icon {
+      position: relative;
+      float: right;
+      left: auto;
+      margin: -55px 5px 0 0px;
+    } 
   }
-
-  .cbp_tmtimeline > li .cbp_tmtime {
-    width: 100%;
-    position: relative;
-    padding: 0 0 20px 0;
-  }
-
-  .cbp_tmtimeline > li .cbp_tmtime span {
-    text-align: left;
-  }
-
-  .cbp_tmtimeline > li .cbp_tmlabel {
-    margin: 0 0 30px 0;
-    padding: 1em;
-    font-weight: 400;
-    font-size: 95%;
-  }
-
-  .cbp_tmtimeline > li .cbp_tmlabel:after {
-    right: auto;
-    left: 20px;
-    border-right-color: transparent;
-    border-bottom-color: @darkpurple;
-    top: -20px;
-  }
-
-  .cbp_tmtimeline > li:nth-child(odd) .cbp_tmlabel:after {
-    border-right-color: transparent;
-    border-bottom-color: @lightpurple;
-  }
-
-  .cbp_tmtimeline > li .cbp_tmicon {
-    position: relative;
-    float: right;
-    left: auto;
-    margin: -55px 5px 0 0px;
-  } 
 }
 
 
