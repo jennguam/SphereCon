@@ -1,5 +1,7 @@
 
 // jQuery for page scrolling feature - requires jQuery Easing plugin
+
+// Floating label headings for the contact form
 $(function() {
     $('body').on('click', '.page-scroll a', function(event) {
         var $anchor = $(this);
@@ -8,11 +10,7 @@ $(function() {
         }, 1500, 'easeInOutExpo');
         event.preventDefault();
     });
-    
-});
 
-// Floating label headings for the contact form
-$(function() {
     $("body").on("input propertychange", ".floating-label-form", function(e) {
         $(this).toggleClass("floating-label-form-with-value", !! $(e.target).val());
     }).on("focus", ".floating-label-form", function() {
