@@ -65,16 +65,35 @@ header {
 	}
 	.intro-text {
 		.name {
-			display: block;
+			display: inline;
 			text-transform: uppercase;
 			font-weight: 700;
 			font-size: 32px;
-      text-transform:none;
+      color: @white;
+      letter-spacing: 3px;
+      font-family: 'Oswald', sans-serif;
 		}
+    .location{
+      display: inline;
+      text-transform: uppercase;
+      font-weight: 700;
+      font-size: 32px;
+      color: @darkpurple;
+      letter-spacing: 3px;
+      font-family: 'Oswald', sans-serif;
+    }
 		.event-description{
 			font-size: 20px;
-			font-weight: 300;
+      margin-top: 10px;
+			font-weight:600;
+      color: @darkpurple;
+      text-transform: uppercase;
 		}
+    .date{
+      font-style: italic;
+      text-transform: none;
+
+    }
 	}
 }
 
@@ -242,9 +261,9 @@ section {
 }
 
 .btn-cta {
-  background-color: @darkpurple;
-  color: @white;
-  margin-top:15px;
+  border: solid 2px @white;
+  /*color: @darkpurple !important;*/
+  margin-top:25px;
   &:hover,
   &:focus {
     color: @darkpurple;
@@ -445,12 +464,13 @@ footer {
       padding-bottom: 100px;
 
     }
-    .intro-text {
+    .intro-text,.location {
       .name {
         font-size: 48px;
       }
       .event-description {
-        font-size: 28px;
+        font-weight: 600;
+        font-size: 24px;
       }
     }
   }

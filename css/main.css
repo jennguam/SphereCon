@@ -61,15 +61,33 @@ header .container {
   padding-bottom: 50px;
 }
 header .intro-text .name {
-  display: block;
+  display: inline;
   text-transform: uppercase;
   font-weight: 700;
   font-size: 32px;
-  text-transform: none;
+  color: #ffffff;
+  letter-spacing: 3px;
+  font-family: 'Oswald', sans-serif;
+}
+header .intro-text .location {
+  display: inline;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 32px;
+  color: #6b00da;
+  letter-spacing: 3px;
+  font-family: 'Oswald', sans-serif;
 }
 header .intro-text .event-description {
   font-size: 20px;
-  font-weight: 300;
+  margin-top: 10px;
+  font-weight: 600;
+  color: #6b00da;
+  text-transform: uppercase;
+}
+header .intro-text .date {
+  font-style: italic;
+  text-transform: none;
 }
 .speakerBlock {
   margin: 30px 0;
@@ -216,9 +234,9 @@ section#venue #map {
   background: #fff;
 }
 .btn-cta {
-  background-color: #6b00da;
-  color: #ffffff;
-  margin-top: 15px;
+  border: solid 2px #ffffff;
+  /*color: @darkpurple !important;*/
+  margin-top: 25px;
 }
 .btn-cta:hover,
 .btn-cta:focus {
@@ -396,11 +414,14 @@ footer .footer-below {
     padding-top: 200px;
     padding-bottom: 100px;
   }
-  header .intro-text .name {
+  header .intro-text .name,
+  header .location .name {
     font-size: 48px;
   }
-  header .intro-text .event-description {
-    font-size: 28px;
+  header .intro-text .event-description,
+  header .location .event-description {
+    font-weight: 600;
+    font-size: 24px;
   }
   .navbar-fixed-top {
     padding: 25px 0;
