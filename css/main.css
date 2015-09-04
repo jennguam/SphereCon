@@ -415,11 +415,10 @@ footer .footer-below {
     padding-bottom: 100px;
   }
   header .intro-text .name,
-  header .location .name {
+  header .intro-text .location {
     font-size: 48px;
   }
-  header .intro-text .event-description,
-  header .location .event-description {
+  header .intro-text .event-description {
     font-weight: 600;
     font-size: 24px;
   }
