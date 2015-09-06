@@ -68,6 +68,15 @@ header .intro-text .name {
   color: #ffffff;
   letter-spacing: 3px;
   font-family: 'Oswald', sans-serif;
+  margin-bottom: 75px;
+}
+header .intro-text .name:before {
+  position: absolute;
+  top: 75px;
+  left: 545px;
+  width: 80px;
+  content: "";
+  border-bottom: 5px solid #6b00da;
 }
 header .intro-text .location {
   display: inline;
@@ -80,14 +89,14 @@ header .intro-text .location {
 }
 header .intro-text .event-description {
   font-size: 20px;
-  margin-top: 10px;
+  margin-top: 40px;
   font-weight: 600;
   color: #6b00da;
   text-transform: uppercase;
 }
 header .intro-text .date {
-  font-style: italic;
-  text-transform: none;
+  color: #ffffff;
+  text-transform: uppercase;
 }
 .speakerBlock {
   margin: 30px 0;
@@ -448,6 +457,9 @@ footer .footer-below {
 }
 @media screen and (max-width: 1200px) {
   .subheading:before {
+    display: none;
+  }
+  .name:before {
     display: none;
   }
 }

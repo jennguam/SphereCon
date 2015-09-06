@@ -18,6 +18,8 @@ $(function() {
     }).on("blur", ".floating-label-form", function() {
         $(this).removeClass("floating-label-form-with-focus");
     });
+
+
 });
 
 // Highlight the top nav as scrolling occurs
