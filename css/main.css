@@ -89,13 +89,12 @@ header .intro-text .location {
 }
 header .intro-text .event-description {
   font-size: 20px;
-  margin-top: 40px;
+  margin-top: 30px;
   font-weight: 600;
   color: #6b00da;
   text-transform: uppercase;
 }
 header .intro-text .date {
-  color: #ffffff;
   text-transform: uppercase;
 }
 .speakerBlock {
